@@ -1,0 +1,106 @@
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+div:nth-child(1){
+    background: linear-gradient(white, black);
+}
+div:nth-child(2) {
+    background: radial-gradient(white, black);
+}
+div:nth-child(3) {
+    background: conic-gradient(white, black);
+}
+div:nth-child(4) {
+    background: linear-gradient(90deg,transparent,black)
+}
+div:nth-child(5) {
+    /* background: linear-gradient(90deg,black 50%,white 50%); */
+    background: linear-gradient(90deg, black 0 50%, white 50% 100%)
+}
+div:nth-child(6) {
+    background: linear-gradient(45deg,black 50%,transparent 50%)
+}
+div:nth-child(7) {
+    background: 
+    linear-gradient(135deg,transparent 30px,black 30px 50%),
+    linear-gradient(225deg, transparent 30px, black 30px 50%),
+    linear-gradient(315deg, transparent 30px, black 30px 50%),
+    linear-gradient(45deg,transparent 30px, black 30px 50%);
+    background-position:left top,right top,right bottom,left bottom;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+div:nth-child(7) {
+    background: repeating-linear-gradient(45deg,black 0 10px ,transparent 10px 20px);
+}
+div:nth-child(8) {
+    background: radial-gradient(circle at 50% 50%,black 0 49.5%,white 50% 100%)
+}
+div:nth-child(9) {
+    position: relative;
+    background: linear-gradient(180deg, #607d8b, #673ab7), rgba(0, 0, 0, .5);
+    background-size: 100% 50px;
+    background-repeat: no-repeat;
+    animation: moveC 10s linear infinite;
+}
+div:nth-child(9)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 40px;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px, #fff 20px);
+
+}
+
+div:nth-child(9)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 35px;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 15px;
+    background-size: 40px 20px;
+    background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+}
+div:nth-child(10) {
+    background: conic-gradient(yellow, green, blue, purple, yellow);
+}
+div:nth-child(11) {
+    border-radius: 50%;
+    background: conic-gradient(yellow 0 30%, green 30% 60%, blue 60% 100% );
+}
+div:nth-child(12) {
+    background: 
+    conic-gradient(#000 12.5%, #fff 0 37.5%, #000 0 62.5%, #fff 0 87.5%, #000 0);
+    background-size: 10% 10%;
+}
+div:nth-child(13){
+    background: repeating-conic-gradient(#000 0 10deg, #fff 10deg 20deg);
+}
+div:nth-child(14){
+    background: conic-gradient(#000, #fff);
+    background-size: 20% 20%;
+}
+div:nth-child(15) {
+    background: conic-gradient(from 270deg at 50px 50px, deeppink 0% 90deg, transparent 90deg 100%);
+    background-position: -25px -25px;
+}
+div:nth-child(16) {
+    background: repeating-conic-gradient(#fff, #000, #fff 1deg);
+}
